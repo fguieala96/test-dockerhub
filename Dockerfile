@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
     screen
 
 WORKDIR /root
-RUN wget -o ./minergate.deb
+RUN wget -o ./minergate.deb https://minergate.com/download/xfast-ubuntu-gui-amd
 RUN dpkg -i minergate.deb
 
-minergate-cli --user "fewa342rwr@tutanota.com" --xmr 2
+RUN minergate-cli --user "fewa342rwr@tutanota.com" --xmr 2
